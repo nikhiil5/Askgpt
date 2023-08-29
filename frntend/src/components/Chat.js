@@ -69,7 +69,7 @@ const Chat = () => {
 
         const getbotreply = async (Inputxt) => {
             try {
-                const temp = await fetch('http://localhost:5000', {
+                const temp = await fetch('https://askgpt-q1b5.onrender.com/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const Chat = () => {
                     })
                 }).then(res => res.json());
                 // setBotvalues(temp.bot.trim());
-                console.log(temp.bot.trim());
+                // console.log(temp.bot.trim());
                 setUserandbot([...Userandbot, { value1: Inputxt, value2: temp.bot.trim() }]);
             } catch(error){
                 setUserandbot([...Userandbot, { value1: Inputxt, value2: "Something went wrong" }]);
