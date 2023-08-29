@@ -7,7 +7,7 @@ const Nav = () => {
             <div className='elements'>
                 <ul className='Navcontainer'>
                     <li className='item1'>
-                        <a href="http://localhost:3000/" className='Askgpt'>Askgpt</a>
+                        <a href="https://askgpt-q1b5.onrender.com/" className='Askgpt'>Askgpt</a>
                     </li>
                     <li className='item2'>
                         <a href="https://platform.openai.com/" target="blank"className='Home'>API</a>
