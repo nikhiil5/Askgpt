@@ -1,0 +1,42 @@
+*{
+    background-color: rgb(123, 112, 112);
+}
+
+.chatstrp{
+    color: rgb(123, 112, 112);
+}
+
+.botans{
+    white-space: pre-wrap;
+    text-align: left;
+    margin-left: 5px;
+    color: white;
+}
+
+.txt{
+    display: flex;
+    justify-content: left;
+    
+    
+    font-size: 25px;
+    padding: 20px 200px 20px 220px;
+    
+    
+}
+
+.dataa, .txt, .profile, .botans, .botlogo{
+    background-color: rgb(123, 112, 112);
+}
+
+.thinker{
+    color: white;
+}
+
+
+.botlogo{
+    width: 25px;
+} 
+
+.chatstrp{
+    background-color: rgb(185, 104, 104);
+}

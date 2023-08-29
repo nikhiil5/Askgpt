@@ -1,0 +1,119 @@
+* {
+    background-color: rgb(56, 54, 54);
+
+}
+
+.userinput {
+    margin-left: 250px;
+
+    position: fixed;
+    top: 90vh;
+    background-color: #333;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.searchbar {
+    color: white;
+    width: 1000px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 12px;
+    background-color: #444;
+    padding: 10px;
+
+}
+
+.searchbutton {
+    height: 60px;
+    width: 80px;
+    font-size: 25px;
+    border-radius: 12px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: fixed;
+    bottom: 0px;
+}
+
+.searchlogo {
+    /* margin-left: 5px; */
+    height: 40px;
+    width: 40px;
+}
+
+.wtrmrk {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: rgba(128, 119, 119, 0.3);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.nowtrmrk {
+    display: none;
+}
+
+.usr {
+    margin-left: 5px;
+
+}
+
+.userquery {
+    color: white;
+    display: flex;
+    padding: 20px 200px 20px 220px;
+
+    font-size: 25px;
+}
+
+.userlogo {
+    width: 25px;
+}
+
+.chatbox {
+    margin-top: 15px;
+    flex: 1;
+    height: 75vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+
+}
+
+
+
+.yes {
+    display: flex;
+    padding: 20px 200px 20px 220px;
+    background-color: rgb(123, 112, 112);
+
+}
+
+.botlogo {
+    width: 25px;
+}
+
+.no {
+    display: none;
+}
+
+.thinker {
+    margin-left: 5px;
+    font-size: 25px;
+    background-color: rgb(123, 112, 112);
+    color: white;
+}
+
+.userquery,
+.userlogo,
+.usr,
+.iptlogo {
+    background-color: rgb(124, 133, 142);
+}

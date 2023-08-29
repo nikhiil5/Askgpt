@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+    
+}
+
+.Navcontainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    
+    background-color: rgb(56, 54, 54);
+    height: 50px;
+
+}
+
+.item1, .item2, .item3, .item4{
+    list-style-type: none;
+}
+
+
+
+.Askgpt, .Home, .Features, .ContactUs{
+    text-decoration: none;
+    position: fixed;
+    font-size: 25px;
+    color: white;
+}
