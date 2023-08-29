@@ -14,10 +14,10 @@ const Chat = () => {
     const [inputValues, setInputValues] = useState([]);
     const [Botvalues, setBotvalues] = useState([]);
     const [Userandbot, setUserandbot] = useState([]);
-    const [watermark,setwatermark] = useState(true);
+    const [watermark, setwatermark] = useState(true);
 
 
-    
+
 
     const thinking = [
         '.',
@@ -28,7 +28,7 @@ const Chat = () => {
 
     const [currentSentence, setCurrentSentence] = useState(0);
 
-    
+
 
 
     useEffect(() => {
@@ -68,17 +68,23 @@ const Chat = () => {
 
 
         const getbotreply = async (Inputxt) => {
-            const temp = await fetch('https://askgpt-q1b5.onrender.com/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    prompt: Inputxt
-                })
-            }).then(res => res.json());
-            setBotvalues(temp.bot.trim());
-            setUserandbot([...Userandbot, { value1: Inputxt, value2: temp.bot.trim() }]);
+            try {
+                const temp = await fetch('http://localhost:5000', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        prompt: Inputxt
+                    })
+                }).then(res => res.json());
+                // setBotvalues(temp.bot.trim());
+                console.log(temp.bot.trim());
+                setUserandbot([...Userandbot, { value1: Inputxt, value2: temp.bot.trim() }]);
+            } catch(error){
+                setUserandbot([...Userandbot, { value1: Inputxt, value2: "Something went wrong" }]);
+                alert(error);
+            }
         }
 
         // console.log(Inputxt);
@@ -133,7 +139,7 @@ const Chat = () => {
                                     inputValues={inputValues}
                                     Botvalues={Botvalues}
                                     Userandbot={Userandbot}
-                                    
+
                                     index={index}
                                 />
                             </div>

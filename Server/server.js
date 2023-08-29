@@ -39,8 +39,8 @@ app.post('/', async (req, res) => {
             bot: response.choices[0].message.content
         })
     } catch (error) {
-        // console.log(error);
-        // res.status(500).send({ error })
+        console.log(error);
+        res.status(500).send({ error })
     }
 });
 
