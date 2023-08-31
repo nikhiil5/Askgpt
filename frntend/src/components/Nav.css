@@ -11,7 +11,7 @@
     margin-top: 10px;
     
     background-color: rgb(56, 54, 54);
-    height: 50px;
+    height: 7vh;
 
 }
 
@@ -24,6 +24,6 @@
 .Askgpt, .Home, .Features, .ContactUs{
     text-decoration: none;
     position: fixed;
-    font-size: 25px;
+    font-size: 3.5vh;
     color: white;
 }
