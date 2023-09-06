@@ -15,15 +15,74 @@
 
 }
 
+.mobilenavcontainer{
+    display: none;
+}
+
 .item1, .item2, .item3, .item4{
     list-style-type: none;
 }
 
 
-
-.Askgpt, .Home, .Features, .ContactUs{
+.Askgpt, .API, .Features, .ContactUs{
     text-decoration: none;
-    position: fixed;
+    /* position: fixed; */
     font-size: 3.5vh;
     color: white;
+}
+
+@media screen and (max-width:414px){
+    .Navcontainer{
+        display: none;
+    }
+    .mobilenavcontainer{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        margin-top: 10px;
+        height: 7vh;
+    }
+    .active{
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+    }
+    .notactive{
+        display: none;
+    } 
+    .closedropdown{
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+    }
+    .dropdowncontent{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 1vh;
+        
+    }
+    .item2,.item3, .item4, .item5{
+        text-align: right;
+        border: none;
+        outline: none;
+        z-index: 1;
+    }
+    .item3, .item4, .item5{
+        text-align: left;
+        background-color: rgb(176, 168, 168);
+        
+    }
+    
+    .API, .Features, .ContactUs{
+        background-color: rgb(176, 168, 168);
+        margin: 1vh 2vh 1vh 1vh;
+    }
+
+    
+    
+    
 }
