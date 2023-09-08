@@ -117,7 +117,7 @@
 
 @media screen and (max-width:425px){
     .chatbox{
-        height: 73vh;
+        height: 70vh;
     }
     .userquery{
         padding-left: 4vw;
