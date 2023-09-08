@@ -7,14 +7,18 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="Navigation">
-        <Nav/>
+
+      <div className='fullsize'>
+        <div className="Navigation">
+          <Nav />
+        </div>
+
+        <div className="chatarea">
+          <Chat />
+        </div>
       </div>
 
-      <div className="chatarea">
-        <Chat/>
-      </div>
-      
+
     </div>
   );
 }
