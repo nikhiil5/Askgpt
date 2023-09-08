@@ -1,6 +1,6 @@
 import React from 'react';
 import Chatstrip from './Chatstrip';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import bot from '../assets/bot.svg';
 import send from '../assets/send.svg'
 import user from '../assets/user.svg';
@@ -15,6 +15,7 @@ const Chat = () => {
     const [Botvalues, setBotvalues] = useState([]);
     const [Userandbot, setUserandbot] = useState([]);
     const [watermark, setwatermark] = useState(true);
+    const chatboxRef = useRef(null);
 
 
 
@@ -97,12 +98,20 @@ const Chat = () => {
 
         setSearchinput("");
 
+
+
     }
+    useEffect(() => {
+            
+        if (chatboxRef.current) {
+            chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
+          }
+      }, [Userandbot,inputValues]);
 
 
     return (
         <div className='chatcontainer'>
-            <div className='chatbox'>
+            <div ref={chatboxRef} className='chatbox'>
 
                 <div className={user ? "user" : "bot"}>
 

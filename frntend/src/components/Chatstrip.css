@@ -40,3 +40,10 @@
 .chatstrp{
     background-color: rgb(185, 104, 104);
 }
+
+@media screen and (max-width:425px){
+    .txt{
+        padding-left: 4vw;
+        padding-right: 2vw;
+    }
+}

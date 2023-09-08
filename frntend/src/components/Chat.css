@@ -86,7 +86,6 @@
 }
 
 
-
 .yes {
     display: flex;
     padding: 20px 200px 20px 220px;
@@ -114,4 +113,29 @@
 .usr,
 .iptlogo {
     background-color: rgb(124, 133, 142);
+}
+
+@media screen and (max-width:425px){
+    .chatbox{
+        height: 73vh;
+    }
+    .userquery{
+        padding-left: 4vw;
+        padding-right: 2vw;
+    }
+    .usr{
+        text-align: left;
+    }
+    .yes{
+        padding-left: 4vw;
+        padding-right: 2vw;
+    }
+    .searchlogo{
+        width: 30px;
+        
+    }
+    .searchbar{
+        padding-left: 5px;
+        padding-right: 3px;
+    }
 }
