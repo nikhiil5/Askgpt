@@ -1,11 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './Chatstrip.css';
 import bot from '../assets/bot.svg';
+import Printdata from "./Printdata";
 
 
 
 const Chatstrip = (props) => {
 
+
+    const [inputValue, setInputValue] = useState('');
+
+    const handledatachange = (data) => {
+        
+        setInputValue(data);
+
+        
+        props.onValueChange(data);
+    };
 
     return (
         <div className="chatstrp">
@@ -20,7 +31,7 @@ const Chatstrip = (props) => {
 
                             return (
 
-                                
+
                                 <div key={index} >
 
                                     {((props.Userandbot[props.index]) ?
@@ -31,7 +42,7 @@ const Chatstrip = (props) => {
                                                     alt={'bot'}
                                                 />
                                             </div>
-                                            <div className="botans" key={props.uniqueID}>{input.value2}</div>
+                                            <div className="botans" key={props.uniqueID}><Printdata datachange={handledatachange} inputString={input.value2} /></div>
                                         </div>) : (<div></div>)) : (<div></div>))}
                                 </div>
                             )

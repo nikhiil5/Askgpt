@@ -17,9 +17,6 @@ const Chat = () => {
     const [watermark, setwatermark] = useState(true);
     const chatboxRef = useRef(null);
 
-
-
-
     const thinking = [
         '.',
         '..',
@@ -28,8 +25,6 @@ const Chat = () => {
     ]
 
     const [currentSentence, setCurrentSentence] = useState(0);
-
-
 
 
     useEffect(() => {
@@ -43,8 +38,6 @@ const Chat = () => {
     }, []);
 
 
-
-
     const generateUniqueId = () => {
         const timestamp = Date.now();
         const randomNumber = Math.random();
@@ -54,12 +47,9 @@ const Chat = () => {
     }
 
 
-
     let uniqueId;
 
     const [isAI, setisAI] = useState(true);
-
-
 
     const handlesearch = (event) => {
         event.preventDefault();
@@ -79,16 +69,12 @@ const Chat = () => {
                         prompt: Inputxt
                     })
                 }).then(res => res.json());
-                // setBotvalues(temp.bot.trim());
-                // console.log(temp.bot.trim());
                 setUserandbot([...Userandbot, { value1: Inputxt, value2: temp.bot.trim() }]);
-            } catch(error){
+            } catch (error) {
                 setUserandbot([...Userandbot, { value1: Inputxt, value2: "Something went wrong" }]);
                 alert(error);
             }
         }
-
-        // console.log(Inputxt);
 
         uniqueId = generateUniqueId();
         setwatermark(false);
@@ -98,15 +84,22 @@ const Chat = () => {
 
         setSearchinput("");
 
-
-
     }
+
+    const [childValue, setChildValue] = useState('');
+
+    
+    const handleChildValueChange = (value) => {
+        setChildValue(value);
+        
+    };
+
     useEffect(() => {
-            
+
         if (chatboxRef.current) {
             chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
-          }
-      }, [Userandbot,inputValues]);
+        }
+    }, [childValue, Userandbot, inputValues]);
 
 
     return (
@@ -121,7 +114,7 @@ const Chat = () => {
                     </div>
 
 
-                    <div>{inputValues.map((value, index) => {
+                    <div ref={chatboxRef}>{inputValues.map((value, index) => {
                         return (
                             <div className='chtara' key={index}>
                                 <div className="userquery" key={index}>
@@ -143,12 +136,12 @@ const Chat = () => {
                                     <div className='thinker'>{thinking[currentSentence]}</div>
                                 </div>
                                 <Chatstrip
+                                    onValueChange={handleChildValueChange}
                                     isAI={isAI}
                                     uniqueId={uniqueId}
                                     inputValues={inputValues}
                                     Botvalues={Botvalues}
                                     Userandbot={Userandbot}
-
                                     index={index}
                                 />
                             </div>

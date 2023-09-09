@@ -81,8 +81,7 @@
     flex: 1;
     height: 77vh;
     overflow-y : auto;
-    scroll-behavior: smooth;
-
+    scroll-behavior: auto;
 }
 
 
