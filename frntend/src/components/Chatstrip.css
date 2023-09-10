@@ -47,3 +47,10 @@
         padding-right: 2vw;
     }
 }
+
+@media screen and (max-width:768px){
+    .txt{
+        padding-left: 10vw;
+        padding-right: 2vw;
+    }
+}

@@ -139,3 +139,18 @@
         padding-right: 3px;
     }
 }
+
+@media screen and (max-width:768px){
+    .userquery{
+        padding-left: 10vw;
+        padding-right: 2vw;
+    }
+    .yes{
+        padding-left: 10vw;
+        padding-right: 2vw;
+    }
+    .searchlogo{
+        width: 30px;
+        
+    }
+}
