@@ -116,6 +116,7 @@
 
 @media screen and (max-width:425px){
     .chatbox{
+        margin-top: 9px;
         height: 70vh;
     }
     .userquery{
